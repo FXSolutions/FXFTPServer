@@ -1,5 +1,5 @@
 # FXFTPServer
-FTP Server for iOS (Swift)
+FTP Server for iOS with Swift Example
 
 based on google ftp server [sources](https://code.google.com/archive/p/ios-ftp-server/)
 
