@@ -76,6 +76,7 @@ class ViewController: UITableViewController {
         
         
         self.ipAddress.text = "Connect to \(ipAddresText):1337"
+        print("\(ipAddresText):1337")
         
     }
     

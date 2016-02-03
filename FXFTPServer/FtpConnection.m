@@ -328,7 +328,7 @@
 // ----------------------------------------------------------------------------------------------------------
 {
 	
-	NSLog(@"FC:didReceiveDataRead");
+	//NSLog(@"FC:didReceiveDataRead");
 	
 	// must have sent a file
 	
@@ -337,7 +337,7 @@
 	if ( currentFileHandle != nil )
 	{
 		// Append data on
-		NSLog(@"FC:Writing File to %@", currentFile );
+		//NSLog(@"FC:Writing File to %@", currentFile );
 		[ currentFileHandle writeData:dataConnection.receivedData ];
 		
 	}
@@ -782,8 +782,6 @@
 	{
 		NSLog(@"FC:Erorr  Cant set connection state to Client Sending : no Connection yet ");
 	}
-	
-	
 	
 }
 
