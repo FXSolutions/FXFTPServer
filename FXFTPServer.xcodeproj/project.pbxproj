@@ -20,6 +20,11 @@
 		BE22528F1C605D420028B3E9 /* NetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2252871C605D420028B3E9 /* NetworkController.m */; };
 		BE2252911C60618D0028B3E9 /* ftp_commands.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE2252901C60618D0028B3E9 /* ftp_commands.plist */; };
 		BE5449121C613F7C007ACF76 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5449111C613F7C007ACF76 /* GCDAsyncSocket.m */; };
+		BE5449141C61C625007ACF76 /* FXFtpConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5449131C61C625007ACF76 /* FXFtpConnection.swift */; };
+		BE5449161C61C63A007ACF76 /* FXFTPDataConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5449151C61C63A007ACF76 /* FXFTPDataConnection.swift */; };
+		BE5449181C61C649007ACF76 /* FXFtpServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5449171C61C649007ACF76 /* FXFtpServer.swift */; };
+		BE54491A1C61C650007ACF76 /* FXList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5449191C61C650007ACF76 /* FXList.swift */; };
+		BE54491C1C61C65B007ACF76 /* FXNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE54491B1C61C65B007ACF76 /* FXNetworkController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +64,11 @@
 		BE2252901C60618D0028B3E9 /* ftp_commands.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ftp_commands.plist; sourceTree = "<group>"; };
 		BE5449101C613F7C007ACF76 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
 		BE5449111C613F7C007ACF76 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		BE5449131C61C625007ACF76 /* FXFtpConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXFtpConnection.swift; sourceTree = "<group>"; };
+		BE5449151C61C63A007ACF76 /* FXFTPDataConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXFTPDataConnection.swift; sourceTree = "<group>"; };
+		BE5449171C61C649007ACF76 /* FXFtpServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXFtpServer.swift; sourceTree = "<group>"; };
+		BE5449191C61C650007ACF76 /* FXList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXList.swift; sourceTree = "<group>"; };
+		BE54491B1C61C65B007ACF76 /* FXNetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXNetworkController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,8 +144,8 @@
 			children = (
 				BE2252771C605D420028B3E9 /* AsyncSocket.h */,
 				BE2252781C605D420028B3E9 /* AsyncSocket.m */,
-				BE2252791C605D420028B3E9 /* FtpConnection.h */,
 				BE2252901C60618D0028B3E9 /* ftp_commands.plist */,
+				BE2252791C605D420028B3E9 /* FtpConnection.h */,
 				BE22527A1C605D420028B3E9 /* FtpConnection.m */,
 				BE22527B1C605D420028B3E9 /* FtpDataConnection.h */,
 				BE22527C1C605D420028B3E9 /* FtpDataConnection.m */,
@@ -155,6 +165,11 @@
 			children = (
 				BE5449101C613F7C007ACF76 /* GCDAsyncSocket.h */,
 				BE5449111C613F7C007ACF76 /* GCDAsyncSocket.m */,
+				BE5449131C61C625007ACF76 /* FXFtpConnection.swift */,
+				BE5449151C61C63A007ACF76 /* FXFTPDataConnection.swift */,
+				BE5449171C61C649007ACF76 /* FXFtpServer.swift */,
+				BE5449191C61C650007ACF76 /* FXList.swift */,
+				BE54491B1C61C65B007ACF76 /* FXNetworkController.swift */,
 			);
 			name = swift;
 			sourceTree = "<group>";
@@ -203,6 +218,7 @@
 		BE22523B1C60582B0028B3E9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = FX;
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = kioshimafx;
@@ -263,11 +279,16 @@
 				BE2252891C605D420028B3E9 /* FtpConnection.m in Sources */,
 				BE22528B1C605D420028B3E9 /* FtpServer.m in Sources */,
 				BE2252881C605D420028B3E9 /* AsyncSocket.m in Sources */,
+				BE5449181C61C649007ACF76 /* FXFtpServer.swift in Sources */,
 				BE22528F1C605D420028B3E9 /* NetworkController.m in Sources */,
 				BE2252491C60582B0028B3E9 /* ViewController.swift in Sources */,
 				BE22528E1C605D420028B3E9 /* list.m in Sources */,
 				BE5449121C613F7C007ACF76 /* GCDAsyncSocket.m in Sources */,
 				BE2252471C60582B0028B3E9 /* AppDelegate.swift in Sources */,
+				BE5449141C61C625007ACF76 /* FXFtpConnection.swift in Sources */,
+				BE54491C1C61C65B007ACF76 /* FXNetworkController.swift in Sources */,
+				BE54491A1C61C650007ACF76 /* FXList.swift in Sources */,
+				BE5449161C61C63A007ACF76 /* FXFTPDataConnection.swift in Sources */,
 				BE22528A1C605D420028B3E9 /* FtpDataConnection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
