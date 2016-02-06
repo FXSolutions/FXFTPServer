@@ -7,18 +7,16 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UITableViewController {
     
     var ftpServer : FtpServer!
-    
     var ipAddress : UILabel!
-    
     var rootDir : String!
-    
     var files = [AnyObject]()
     
-    
+
     override func loadView() {
         super.loadView()
         
@@ -74,7 +72,6 @@ class ViewController: UITableViewController {
         
         let ipAddresText = NetworkController.localWifiIPAddress()
         
-        
         self.ipAddress.text = "Connect to \(ipAddresText):1337"
         print("\(ipAddresText):1337")
         
@@ -103,15 +100,88 @@ class ViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell : UITableViewCell = tableView.dequeueReusableCellWithIdentifier("groupcell", forIndexPath: indexPath) as UITableViewCell
+        //let cell : UITableViewCell = tableView.dequeueReusableCellWithIdentifier("groupcell", forIndexPath: indexPath) as UITableViewCell
+        
+        let cell : UITableViewCell =  UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "groupcell")
         
         let object = self.files[indexPath.row]
         
-        cell.textLabel?.text = "\(object)"
+        
+        if (NSFileManager.defaultManager().fileExistsAtPath("\(self.rootDir)/\(object)")) {
+            
+            let mp3path = "\(self.rootDir)/\(object)"
+            let mp3url = NSURL(fileURLWithPath: mp3path)
+            let audioAsset = AVURLAsset(URL: mp3url)
+            let audioDuration = audioAsset.duration
+            let durationInSeconds = Int(CMTimeGetSeconds(audioDuration))
+            var kbps :Double!
+            
+            
+            do {
+                
+                let attr : NSDictionary? = try NSFileManager.defaultManager().attributesOfItemAtPath(mp3path)
+                
+                var fileSize : UInt64 = 0
+                
+                if let _attr = attr {
+                    fileSize = _attr.fileSize();
+                }
+                print("File size = \(fileSize)")
+                
+                let kbit = Int(fileSize)/128;//calculate bytes to kbit
+                kbps = ceil(round(Double(kbit)/Double(durationInSeconds))/16)*16
+                
+                
+            } catch {
+                
+            }
+            
+            getAtristNameFromAsset(audioAsset, comptition: { (title) -> () in
+                cell.textLabel?.text = "\(object) : \(kbps)"
+                cell.detailTextLabel?.text = "\(title)"
+            })
+            
+            
+        }
         
         return cell
         
     }
+    
+    
+    
+    func getAtristNameFromAsset(asset:AVURLAsset,comptition:(title:String) -> ()) {
+        
+        var artist = ""
+        var title  = ""
+        
+        for (_, format) in asset.availableMetadataFormats.enumerate() {
+            for (_, item) in asset.metadataForFormat(format).enumerate() {
+                
+                print("commonKey === \(item.commonKey)")
+                
+                if item.commonKey == "artist" {
+                    artist = item.value as! String
+                } else if item.commonKey == "title" {
+                    title = item.value as! String
+                }
+                
+                if (artist != "" && title != "") {
+                    print("artist/ title === \(artist) - \(title)")
+                    comptition(title: "\(artist) - \(title)")
+                    break;
+                }
+                
+            }
+            
+        }
+        
+        
+        
+        
+    }
+    
+    
     
 }
 
