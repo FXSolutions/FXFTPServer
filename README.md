@@ -4,6 +4,8 @@
 
 FTP Server for iOS with Swift Example
 
+Example can get mp3 files from your Mac or PC , and get ID3 headers from file.
+
 based on google ftp server [sources](https://code.google.com/archive/p/ios-ftp-server/)
 
 Tested only in FileZilla(Mac)/Transmit(Mac), i don't know how it work's in other clients, but you can open issue or pull requst for me :3
