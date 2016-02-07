@@ -10,7 +10,7 @@ Tested only in FileZilla(Mac)/Transmit(Mac), i don't know how it work's in other
 
 ### Installation & Requirements
 
-This project requires Xcode 7.0 to run and compiles with swift 2.0
+This project requires Xcode 7.0 to run and compiles with swift 2.2
 
 ## License
 FXFTPServer is available under the MIT license. See the LICENSE file for more info.
