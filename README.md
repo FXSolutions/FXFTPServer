@@ -13,6 +13,8 @@ Tested only in FileZilla(Mac)/Transmit(Mac), i don't know how it work's in other
 ### Swift version of ftp server 
 Not ready now, but i am working on it.
 
+You can see progress in swift folder.
+
 ### Installation & Requirements
 
 This project requires Xcode 7.0 to run and compiles with swift 2.2
