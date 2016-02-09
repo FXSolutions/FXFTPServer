@@ -18,7 +18,7 @@ class FXFtpServer:NSObject, GCDAsyncSocketDelegate {
     var portNumber          : Int!
     weak var delegate       : AnyObject!
     
-    var connections         : Array<AnyObject>!
+    var connections         : Array<FXFtpConnection>!
     
     var commands            : NSDictionary!
     var baseDir             : NSString!
@@ -43,7 +43,7 @@ class FXFtpServer:NSObject, GCDAsyncSocketDelegate {
         self.commands = NSDictionary.init(contentsOfFile: plistPath!)
         
         // Clear out connections list
-        self.connections = Array<AnyObject>()
+        self.connections = Array<FXFtpConnection>()
         
         // Create a socket
         self.portNumber = serverPort
@@ -101,18 +101,30 @@ class FXFtpServer:NSObject, GCDAsyncSocketDelegate {
     }
     
     override func onSocket(sock: AsyncSocket!, didConnectToHost host: String!, port: UInt16) {
-        //
+        print("FXFtpServer: didConnectToHost port: \(port)")
+        
     }
     
     //MARK:- Notifications
     
     func didReceiveFileListChanged() {
         
+        if (notificationObject != nil) {
+            self.notificationObject.didReceiveFileListChanged()
+        }
+        
     }
     
     //MARK:- Connections
     
-    func closeConnection(connection:AnyObject) {
+    func closeConnection(ftpConnection:FXFtpConnection) {
+        
+        
+//        if let index = self.connections.indexOf(ftpConnection) {
+//            self.removeAtIndex(index)
+//        }
+        
+        
         
     }
     

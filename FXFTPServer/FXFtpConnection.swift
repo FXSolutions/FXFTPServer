@@ -10,7 +10,17 @@ import Foundation
 
 class FXFtpConnection {
     
-    var connectionSocket:GCDAsyncSocket!
+    var connectionSocket    :GCDAsyncSocket!
+    var server              :FXFtpServer!
+    
+    var dataListeningSocket     :GCDAsyncSocket!
+    var dataSocket              :GCDAsyncSocket!
+    
+    var dataConnection : AnyObject!
+    
+    init() {
+        
+    }
     
 
 }
