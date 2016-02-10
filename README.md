@@ -10,6 +10,9 @@ based on google ftp server [sources](https://code.google.com/archive/p/ios-ftp-s
 
 Tested only in FileZilla(Mac)/Transmit(Mac), i don't know how it work's in other clients, but you can open issue or pull requst for me :3
 
+### Swift version of ftp server 
+Not ready now, but i am working on it.
+
 ### Installation & Requirements
 
 This project requires Xcode 7.0 to run and compiles with swift 2.2
