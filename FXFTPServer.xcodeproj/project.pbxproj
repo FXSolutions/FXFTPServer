@@ -25,6 +25,7 @@
 		BE5449181C61C649007ACF76 /* FXFtpServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5449171C61C649007ACF76 /* FXFtpServer.swift */; };
 		BE54491A1C61C650007ACF76 /* FXList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5449191C61C650007ACF76 /* FXList.swift */; };
 		BE54491C1C61C65B007ACF76 /* FXNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE54491B1C61C65B007ACF76 /* FXNetworkController.swift */; };
+		BE75EC9B1C6BF554002D50D9 /* FXFTPGlobalDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE75EC9A1C6BF554002D50D9 /* FXFTPGlobalDefines.swift */; };
 		BEC46D751C6A29010070267A /* Collections+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC46D741C6A29010070267A /* Collections+Ext.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		BE5449171C61C649007ACF76 /* FXFtpServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXFtpServer.swift; sourceTree = "<group>"; };
 		BE5449191C61C650007ACF76 /* FXList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXList.swift; sourceTree = "<group>"; };
 		BE54491B1C61C65B007ACF76 /* FXNetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXNetworkController.swift; sourceTree = "<group>"; };
+		BE75EC9A1C6BF554002D50D9 /* FXFTPGlobalDefines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FXFTPGlobalDefines.swift; sourceTree = "<group>"; };
 		BEC46D741C6A29010070267A /* Collections+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collections+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,6 +175,7 @@
 				BE5449191C61C650007ACF76 /* FXList.swift */,
 				BE54491B1C61C65B007ACF76 /* FXNetworkController.swift */,
 				BEC46D741C6A29010070267A /* Collections+Ext.swift */,
+				BE75EC9A1C6BF554002D50D9 /* FXFTPGlobalDefines.swift */,
 			);
 			name = swift;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				BE22528E1C605D420028B3E9 /* list.m in Sources */,
 				BE5449121C613F7C007ACF76 /* GCDAsyncSocket.m in Sources */,
 				BE2252471C60582B0028B3E9 /* AppDelegate.swift in Sources */,
+				BE75EC9B1C6BF554002D50D9 /* FXFTPGlobalDefines.swift in Sources */,
 				BE5449141C61C625007ACF76 /* FXFtpConnection.swift in Sources */,
 				BE54491C1C61C65B007ACF76 /* FXNetworkController.swift in Sources */,
 				BE54491A1C61C650007ACF76 /* FXList.swift in Sources */,

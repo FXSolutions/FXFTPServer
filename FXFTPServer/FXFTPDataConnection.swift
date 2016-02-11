@@ -30,7 +30,6 @@ class FXFTPDataConnection:NSObject,GCDAsyncSocketDelegate {
         
         
         
-        
     }
     
     //MARK:- Write
