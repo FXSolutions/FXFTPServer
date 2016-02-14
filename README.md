@@ -1,4 +1,5 @@
 # FXFTPServer
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/FXSolutions/FXFTPServer/master/LICENSE)
 
 <img src="https://raw.githubusercontent.com/kioshimafx/FXFTPServer/master/FXFTPServer/Assets.xcassets/AppIcon.appiconset/Icon-60%403x.png" align="center" width="100" height="100"/>
 
