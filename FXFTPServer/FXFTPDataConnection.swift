@@ -65,6 +65,7 @@ class FXFTPDataConnection:NSObject,GCDAsyncSocketDelegate {
     override func onSocketWillConnect(sock: AsyncSocket!) -> Bool {
         //
         
+        return true
         
     }
     

@@ -23,6 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window.makeKeyAndVisible()
         self.window = window
         
+        print("test1 = \(FXNetworkController.localWifiIPAddress())")
+        print("test2 = \(FXNetworkController.connectedToNetwork())")
+        print("test3 = \(FXNetworkController.getIPAddressForHost("yandex.ru"))")
+        
         
         return true
     }
